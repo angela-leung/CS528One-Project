@@ -1,0 +1,14 @@
+[Shopping Cart]
+product = a, b, c
+
+
+[Shopping Cart]
+
+
+[Personal infomation]
+address=abc
+
+[Personal infomation]
+
+
+

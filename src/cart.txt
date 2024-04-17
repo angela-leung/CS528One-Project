@@ -1,0 +1,2 @@
+Product 2,Red;XXL,3,8
+Product 0,This is p0,3.42,8

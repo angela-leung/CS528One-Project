@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Products Details</title>
+      <meta name="keywords" content="makeup">
+      <meta name="description" content="">
+      <meta name="author" content="cityugroup">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <script src="js/selectColor.js"></script>
+   </head>
+   <body>
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="container-fluid">
+            <nav class="navbar navbar-light bg-light justify-content-between">
+               <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="index.php">Home</a>
+                  <a href="products.php">Products</a>
+                  <a href="about.html">About</a>
+                  <!-- <a href="client.html">Client</a> -->
+                  <a href="contact.html">Contact</a>
+               </div>
+               <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+               <a class="logo" href="index.php"><img src="images/logo.png"></a></a>
+               <form class="form-inline ">
+                  <div class="login_text">
+                    <ul>
+                      <li><a href="login.php"><img src="images/user-icon.png"></a></li>
+                      <li><a href="cart.html"><img src="images/bag-icon.png"></a></li>
+                      <li><a href="search.html"><img src="images/search-icon.png"></a></li>
+                   </ul>
+                  </div>
+               </form>
+            </nav>
+         </div>
+      </div>
+      <!-- header section end -->
+
+<!-- product order section start -->
+<div class="product-order-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Main Product Image -->
+        <img id="mainProductImage" src="images/mainProductImage.jpg" alt="Default Product Image" />
+      </div>
+      <div class="col-md-6">
+        <!-- Product Details Form -->
+        <form id="productForm" action="cart.html" method="POST">
+          <h3>Product:</h3>
+          
+          <!-- Color selection display -->
+          <div class="selected-color-display">
+            <img id="selectedColorImage" src="images/N09-BEIGE-SABLE.png" alt="Selected Color" />
+            <span id="selectedColorName">N° 09 BEIGE SABLE</span>
+          </div>
+
+          <!-- Color Palette for color selection -->
+          <div class="color-palette">
+            <!-- Color Swatches -->
+            <!-- The onclick function will need to handle both selecting the color and updating the main product image -->
+            <img class="color-swatch" src="images/N09-BEIGE-SABLE.png" alt="BEIGE SABLE" data-color-name="N° 09 BEIGE SABLE" data-color-image="images/N09-BEIGE-SABLE.png" onclick="selectColor(this, 'Description for BEIGE SABLE')">
+
+            <img class="color-swatch" src="images/N12-NUDE-ROSE.png" alt="NUDE ROSÉ" data-color-name="N° 12 NUDE ROSÉ" data-color-image="images/N12-NUDE-ROSE.png" onclick="selectColor(this, 'Description for NUDE ROSÉ')">
+
+            <img class="color-swatch" src="images/N33-ORANGE-SABLE.png" alt="ORANGE SABLE" data-color-name="N° 33 ORANGE SABLE" data-color-image="images/N33-ORANGE-SABLE.png" onclick="selectColor(this, 'Description for ORANGE SABLE')">
+
+            <img class="color-swatch" src="images/N37-ROUGE-GRAINE.png" alt="ROUGE GRAINE" data-color-name="N° 37 ROUGE GRAINE" data-color-image="images/N37-ROUGE-GRAINE.png" onclick="selectColor(this, 'Description for ROUGE GRAINE')">
+
+            <img class="color-swatch" src="images/N38-GRENAT-FUME.png" alt="GRENAT FUME" data-color-name="N° 38 GRENATFUME" data-color-image="images/N38-GRENAT-FUME.png" onclick="selectColor(this, 'Description for GRENAT FUME')">
+            <!-- Add more color swatches as needed -->
+          </div>
+<input type="hidden" id="selectedColor" name="selectedColor" value="N° 09 BEIGE SABLE">
+
+          
+          <!-- Description area -->
+          <h3>Description:</h3>
+          <p id="productDescription">Please select a color to see the description.</p>
+          
+          <!-- Price -->
+          <h3>Price:</h3>
+          <p id="productPrice">$44.00</p>
+          
+          <!-- Quantity Selector -->
+          <h3>Quantity:</h3>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
+          
+          <!-- Add to Bag Button -->
+          <button type="submit" class="add-to-bag-btn">ADD TO BAG</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product order section end -->
+
+      <!-- product details section start -->
+<div class="product-detail-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-detail-text">
+          <h2>RESULTS</h2>
+          <h3>EXCEPTIONAL FORMULA, EXCEPTIONAL RESULTS.</h3>
+          <p>
+            With 12-hour wear, Le Rouge Deep Velvet provides astonishing glide and comfort, while being strikingly matte.
+          </p>
+          <h4>KEY BENEFITS:</h4>
+          <ul>
+            <li>Powdery matte finish</li>
+            <li>High pigmentation</li>
+            <li>Comfortable, sensorial texture</li>
+            <li>12-hour wear</li>
+            <li>Exceptional glide</li>
+            <li>Sumptuous red velvet case</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-detail-image">
+          <img src="images/Powdery Matte Lipstick3.png" alt="Givenchy Deep Velvet Lipstick" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- product ingredients section start -->
+<div class="product-ingredients-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-ingredients-image">
+          <!-- 图片内容 -->
+          <img src="images/Powdery Matte Lipstick2.png" alt="Givenchy Lipstick" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-ingredients-text">
+          <!-- 文字内容 -->
+          <h2>ACTIVE INGREDIENTS</h2>
+          <p>KEY ACTIVE INGREDIENTS:</p>
+          <ul>
+            <li>Waxes bring structure and uniformity ensuring a super-fine film as the lipstick glides on.</li>
+            <li>Ultra-thin powders bestow a superior softness and creamy flexible sensation. In combination with emollient oil the colour stays soft, flexible and comfortable over time. It also ensures perfect adherence for extended wear.</li>
+          </ul>
+          <!-- 一个链接或按钮，用于查看更多成分 -->
+          <a href="#see-ingredients" class="see-ingredients-link">SEE INGREDIENTS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product ingredients section end -->
+
+<!-- product description section start -->
+<div class="product-description-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="product-description-content">
+          <h2 class="text-center">PRODUCT DESCRIPTION</h2>
+          <h3 class="text-left">THE ULTIMATE FASHION SIGNATURE</h3>
+          <p>Le Rouge Deep Velvet embodies the daring sensuality of the House of Givenchy. Dressed in a sublime red velvet case that echoes the lipstick's powdery matte finish, it defines lips in trend-setting style. The generous velvety texture glides over the lips with ease, delivering a vivid matte color from the very first stroke while maintaining an incomparably featherlight feel.</p>
+          <h3 class="text-left">LONG WEAR COLOR AND COMFORT</h3>
+          <p>The 14 powdery matte shades are all saturated with powerful pigments, enabling Le Rouge Deep Velvet to beautify the lips with comfort & intense long-lasting color for up to 12 hours^1.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="product-description-image">
+          <img src="images/Powdery Matte Lipstick1.png" alt="Givenchy Lipstick Image" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product description section end -->
+
+<!-- use & tips section start -->
+<div class="use-tips-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="use-tips-image">
+          <!-- 图片内容 -->
+          <img src="images/Powdery Matte Lipstick4.png" alt="Lipstick Swipe" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="use-tips-text">
+          <!-- 文字内容 -->
+          <h2>USE & TIPS</h2>
+          <p>Start by applying Le Rouge Deep Velvet to the center of the lips and glide towards the corners of the mouth, beginning with the upper lip. Finish with the lower lip for a flawless powdery matte result.</p>
+          <p>To create the perfect canvas for Le Rouge Deep Velvet, layer it over Le Rouge Baume. This balm will provide a 24-hour hydration^1 in a 96% natural origin formula^2. Blot away any excess before applying Le Rouge Deep Velvet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- use & tips section end -->
+
+
+<!-- product details section end -->
+
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="footer_logo"><a href="index.php"><img src="images/footer-logo.png"></a></div>
+            <div class="contact_section_2">
+               <div class="row">
+                  <div class="col-sm-4">
+                     <h3 class="address_text">Contact Us</h3>
+                     <div class="address_bt">
+                        <ul>
+                           <li>
+                              <a href="#">
+                              <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left10">Address : Cityu</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left10">Call : +852 1234567890</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#">
+                              <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left10">Email : dummy@gmail.com</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <!--
+                  <div class="col-sm-4">
+                     <div class="footer_logo_1"><a href="index.php"><img src="images/footer-logo.png"></a></div>
+                     <p class="dummy_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                  </div>
+                  <div class="col-sm-4">
+                     <div class="main">
+                        <h3 class="address_text">Best Products</h3>
+                        <p class="ipsum_text">dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                     </div>
+                  </div>
+                  -->
+               </div>
+            </div>
+            <!--
+            <div class="social_icon">
+               <ul>
+                  <li>
+                     <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  </li>
+                  <li>
+                     <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+               </ul>
+            </div>
+            -->
+         </div>
+      </div>
+      <!-- footer section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <!-- javascript --> 
+      <script src="js/owl.carousel.js"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  
+      <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "100%";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script> 
+   </body>
+</html>

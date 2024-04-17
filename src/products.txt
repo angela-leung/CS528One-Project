@@ -1,0 +1,9 @@
+Makeup Kit, Complete set for beginners, 50, Product Details.html, images/img-3.png
+testUpload,testUpload,20,Product Details.html,images/img-5.png
+testUpload2,testUpload2,30,Product Details.html,images/img-9.png
+testUpload3,testUpload3,30,Product Details.html,images/img-4.png
+testUpload4,testUpload4,50,Product Details.html,images/img-9.png
+testUpload5,testUpload5,23,Product Details.html,images/img-4.png
+testUpload8,testUpload8,20,Product Details.html,images/img-10.png
+testUpload1000,testUpload1000,100,Product Details.html,images/img-2.png
+Genius,test, 24,Product Details.html,images/img-2.png
